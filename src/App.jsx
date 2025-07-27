@@ -3,12 +3,12 @@ import Banner from "./Components/Banner/Banner"
 import Navbar from "./Components/Navbar/Navbar"
 
 function App() {
-  const [coins,setCoins] = useState(0);
+  const [coins, setCoins] = useState(0);
 
-  const handleNavbar = (addedCoins) =>{
+  const handleNavbar = (addedCoins) => {
     const totalCoins = coins + addedCoins;
     setCoins(totalCoins)
-      
+
   }
   return (
     <div>
@@ -22,7 +22,7 @@ function App() {
           <p className="font-[Inter,sans-serif] text-[rgba(19,19,19,0.7)] font-medium text-[20px]">Get the latest updates and news right in your inbox!</p>
 
           <div className="flex gap-2">
-            <input type="text"className="w-[400px] input" placeholder="Enter your email" />
+            <input type="text" className="w-[400px] input" placeholder="Enter your email" />
             <button className="btn w-[140px]">Subscribe</button>
           </div>
 
@@ -32,7 +32,7 @@ function App() {
 
       {/* footer section */}
       <div className="bg-[#06091A] mt-10 p-20 relative">
-        <img src="/assets/media/logo.png"className="mx-auto w-[140px]" alt="" />
+        <img src="/assets/media/logo-footer.png" className="mx-auto w-[140px]" alt="" />
         <footer className="footer text-white max-w-7xl mx-auto sm:footer-horizontal p-10">
           <nav>
             <h6 className="footer-title text-white">About Us</h6>
@@ -55,7 +55,7 @@ function App() {
               <div className="join rounded-2xl">
                 <div>
                   <label className="input validator join-item">
-                    <input type="email"className="rounded-lg text-[rgba(19,19,19,0.4)]" placeholder="Enter your email" required />
+                    <input type="email" className="rounded-lg text-[rgba(19,19,19,0.4)]" placeholder="Enter your email" required />
                   </label>
                   <div className="validator-hint hidden">Enter valid email address</div>
                 </div>

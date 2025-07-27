@@ -1,6 +1,6 @@
 const Navbar = ({ coins }) => {
     return (
-        <nav className="sticky top-0 z-10">
+        <nav className="sticky top-0">
             <div className="navbar bg-white shadow-lg">
                 <div className="p-3 flex items-center justify-between w-7xl mx-auto">
                     <div>
