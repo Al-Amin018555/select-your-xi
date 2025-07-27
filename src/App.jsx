@@ -1,3 +1,4 @@
+import Banner from "./Components/Banner/Banner"
 
 function App() {
 
@@ -36,15 +37,57 @@ function App() {
         </div>
       </nav>
 
-      {/* banner section */}
-      <div className="bg-[url(/public/assets/media/bg-shadow.png)] h-[550px] bg-[#131313] bg-no-repeat max-w-7xl mx-auto mt-5 flex flex-col items-center justify-center space-y-5 rounded-2xl">
+      <Banner></Banner>
+      {/* newsletter section */}
+      <div className="max-w-7xl mx-auto border-[1px] rounded-2xl mt-5 border-black p-5">
+        <div className="bg-[url(/assets/media/bg-shadow.png)] h-[330px] bg-[rgba(255,255,255,0.15)] flex flex-col space-y-3 justify-center items-center rounded-2xl">
 
-        <img src="/assets/media/banner-main.png" alt="banner logo" />
-        <h2 className="font-bold text-4xl text-white">Assemble Your Ultimate Dream 11 Cricket Team</h2>
-        <p className="font-[Inter,sans-serif] text-2xl text-[rgba(255,255,255,0.7)]">Beyond Boundaries Beyond Limits</p>
-        <div className="border-2 border-[#E7FE29] w-[170px] mx-auto flex justify-center p-1 rounded-lg">
-          <button class="btn bg-[#E7FE29] border-0 rounded-lg text-[#131313] font-bold ">Claim Free Credit</button>
+          <h3 className="text-3xl font-bold text-[#131313]">Subscribe to our Newsletter</h3>
+          <p className="font-[Inter,sans-serif] text-[rgba(19,19,19,0.7)] font-medium text-[20px]">Get the latest updates and news right in your inbox!</p>
+
+          <div className="flex gap-2">
+            <input type="text" className="w-[400px]" placeholder="Enter your email" class="input" />
+            <button class="btn w-[140px]">Subscribe</button>
+          </div>
+
         </div>
+
+      </div>
+
+      {/* footer section */}
+      <div className="bg-[#06091A] mt-10 p-20 relative">
+        <img src="/assets/media/logo.png" className="mx-auto w-[140px]" alt="" />
+        <footer class="footer text-white max-w-7xl mx-auto sm:footer-horizontal p-10">
+          <nav>
+            <h6 class="footer-title text-white">About Us</h6>
+            <p>We are a passionate team <br /> dedicated to providing the best <br /> services to our customers.</p>
+          </nav>
+          <nav>
+            <h6 class="footer-title">Quick Links</h6>
+            <ul className="space-y-3">
+              <ol>Home</ol>
+              <ol>Services</ol>
+              <ol>About</ol>
+              <ol>Contact</ol>
+            </ul>
+          </nav>
+          <nav>
+            <h6 class="footer-title">Subscribe</h6>
+            <p className="mb-3">Subscribe to our newsletter for the <br /> latest updates.</p>
+            <div class="grid grid-flow-col gap-4">
+
+              <div class="join rounded-2xl">
+                <div>
+                  <label class="input validator join-item">
+                    <input type="email" className="rounded-lg text-[rgba(19,19,19,0.4)]" placeholder="Enter your email" required />
+                  </label>
+                  <div class="validator-hint hidden">Enter valid email address</div>
+                </div>
+                <button class="btn btn-neutral join-item">Subscribe</button>
+              </div>
+            </div>
+          </nav>
+        </footer>
 
       </div>
     </div>
