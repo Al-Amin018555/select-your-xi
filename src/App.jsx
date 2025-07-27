@@ -1,13 +1,18 @@
+import { useState } from "react";
 import Banner from "./Components/Banner/Banner"
 import Navbar from "./Components/Navbar/Navbar"
 
 function App() {
-  const handleNavbar = () =>{
-    console.log('coins button clicked');
+  const [coins,setCoins] = useState(0);
+
+  const handleNavbar = (addedCoins) =>{
+    const totalCoins = coins + addedCoins;
+    setCoins(totalCoins)
+      
   }
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar coins={coins}></Navbar>
       <Banner handleNavbar={handleNavbar}></Banner>
       {/* newsletter section */}
       <div className="max-w-7xl mx-auto border-[1px] rounded-2xl mt-5 border-black p-5">
