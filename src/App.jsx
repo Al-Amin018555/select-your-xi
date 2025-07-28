@@ -1,19 +1,38 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Banner from "./Components/Banner/Banner"
 import Navbar from "./Components/Navbar/Navbar"
+import Players from "./Components/Players/Players";
 
 function App() {
   const [coins, setCoins] = useState(0);
+  const [players, setPlayers] = useState([]);
+
+  useEffect(() => {
+    fetch('data.json')
+      .then(res => res.json())
+      .then(data => setPlayers(data))
+  }, [])
 
   const handleNavbar = (addedCoins) => {
     const totalCoins = coins + addedCoins;
     setCoins(totalCoins)
 
   }
+
   return (
     <div>
       <Navbar coins={coins}></Navbar>
       <Banner handleNavbar={handleNavbar}></Banner>
+      {/* player section */}
+      <div className="flex justify-between mt-10 max-w-7xl mx-auto">
+        <h3 className="font-bold text-[28px] text-[#131313]">Available Players</h3>
+        <div>
+          <button className="btn">Available</button>
+          <button className="btn">Selected (<span>0</span>)</button>
+        </div>
+      </div>
+      <Players players={players}></Players>
+
       {/* newsletter section */}
       <div className="max-w-7xl mx-auto border-[1px] rounded-2xl mt-5 border-black p-5">
         <div className="bg-[url(/assets/media/bg-shadow.png)] h-[330px] bg-[rgba(255,255,255,0.15)] flex flex-col space-y-3 justify-center items-center rounded-2xl">
@@ -64,7 +83,7 @@ function App() {
             </div>
           </nav>
         </footer>
-
+        <small className="mt-15 text-[rgba(255,255,255,0.6)] text-center flex justify-center">@2024 Your Company All Rights Reserved.</small>
       </div>
     </div>
   )

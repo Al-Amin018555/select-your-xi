@@ -1,0 +1,152 @@
+[
+  {
+    "playerId": 1,
+    "name": "Virat Kohli",
+    "country": "India",
+    "image": "https://i.ibb.co/39GKqL7s/virat.jpg",
+    "role": "Batsman",
+    "battingType": "Right-hand-bat",
+    "bowlingType": "Right-medium",
+    "biddingPrice": "500000"
+  },
+  {
+    "playerId": 2,
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "image": "https://i.ibb.co/SwvBb7zr/babar.jpg",
+    "role": "Batsman",
+    "battingType": "Right-hand-bat",
+    "bowlingType": "Right-offbreak",
+    "biddingPrice": "350000"
+  },
+  {
+    "playerId": 3,
+    "name": "Jos Buttler",
+    "country": "England",
+    "image": "https://i.ibb.co/4ZRDKCKn/jos.jpg",
+    "role": "Wicket-keeper",
+    "battingType": "Right-hand-bat",
+    "bowlingType": "None",
+    "biddingPrice": "380000"
+  },
+  {
+    "playerId": 4,
+    "name": "David Warner",
+    "country": "Australia",
+    "image": "https://i.ibb.co/nNz9py7N/warner.jpg",
+    "role": "Batsman",
+    "battingType": "Left-hand-bat",
+    "bowlingType": "Right-legbreak",
+    "biddingPrice": "250000"
+  },
+  {
+    "playerId": 5,
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "image": "https://i.ibb.co/F1VWM0p/rashid.jpg",
+    "role": "Bowler",
+    "battingType": "Right-hand-bat",
+    "bowlingType": "Right-legbreak",
+    "biddingPrice": "200000"
+  },
+  {
+    "playerId": 6,
+    "name": "Ben Stokes",
+    "country": "England",
+    "image": "https://i.ibb.co/fVtwhVhR/stokes.png",
+    "role": "All-rounder",
+    "battingType": "Left-hand-bat",
+    "bowlingType": "Right-fast-medium",
+    "biddingPrice": "250000"
+  },
+  {
+    "playerId": 7,
+    "name": "Mohammed Shami",
+    "country": "India",
+    "image": "https://i.ibb.co/wNKYx3Bf/shami.png",
+    "role": "Pace Bowler",
+    "battingType": "Right-hand-bat",
+    "bowlingType": "Right-fast",
+    "biddingPrice": "180000"
+  },
+  {
+    "playerId": 8,
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "image": "https://i.ibb.co/XfvMvH5m/shakib.jpg",
+    "role": "All-rounder",
+    "battingType": "Left-hand-bat",
+    "bowlingType": "left-arm",
+    "biddingPrice": "300000"
+  },
+  {
+    "playerId": 9,
+    "name": "Trent Boult",
+    "country": "New Zealand",
+    "image": "https://i.ibb.co/4nSsrmGd/boult.jpg",
+    "role": "Bowler",
+    "battingType": "Right-hand-bat",
+    "bowlingType": "Left-fast-medium",
+    "biddingPrice": "350000"
+  },
+  {
+    "playerId": 10,
+    "name": "Glenn Maxwell",
+    "country": "Australia",
+    "image": "https://i.ibb.co/60LpftW4/maxwell.jpg",
+    "role": "All-rounder",
+    "battingType": "Right-hand-bat",
+    "bowlingType": "Right-offbreak",
+    "biddingPrice": "300000"
+  },
+  {
+    "playerId": 11,
+    "name": "Quinton de Kock",
+    "country": "South Africa",
+    "image": "https://i.ibb.co/gbDX18n6/kock.jpg",
+    "role": "Wicket-keeper",
+    "battingType": "Left-hand-bat",
+    "bowlingType": "None",
+    "biddingPrice": "275000"
+  },
+  {
+    "playerId": 12,
+    "name": "Shaheen Afridi",
+    "country": "Pakistan",
+    "image": "https://i.ibb.co/nMyjQXv1/shaheen.jpg",
+    "role": "Fast Bowler",
+    "battingType": "Left-hand-bat",
+    "bowlingType": "Left-arm-fast",
+    "biddingPrice": "320000"
+  },
+  {
+    "playerId": 13,
+    "name": "Hardik Pandya",
+    "country": "India",
+    "image": "https://i.ibb.co/FSgzN6L/hardik.png",
+    "role": "All-rounder",
+    "battingType": "Right-hand-bat",
+    "bowlingType": "Right-fast-medium",
+    "biddingPrice": "340000"
+  },
+  {
+    "playerId": 14,
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "image": "https://i.ibb.co/XfbNdzJY/williamson.jpg",
+    "role": "Batsman",
+    "battingType": "Right-hand-bat",
+    "bowlingType": "Right-offbreak",
+    "biddingPrice": "350000"
+  },
+  {
+    "playerId": 15,
+    "name": "Mujeeb Ur Rahman",
+    "country": "Afghanistan",
+    "image": "https://i.ibb.co/Tq7B6Gz0/mujeeb.png",
+    "role": "Bowler",
+    "battingType": "Right-hand-bat",
+    "bowlingType": "Right-offbreak",
+    "biddingPrice": "170000"
+  }
+]
