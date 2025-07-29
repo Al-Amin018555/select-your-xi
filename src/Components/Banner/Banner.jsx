@@ -1,4 +1,4 @@
-const Banner = ({handleNavbar}) => {
+const Banner = ({handleClaimCoin}) => {
     return (
         <div>
             {/* banner section */}
@@ -8,7 +8,7 @@ const Banner = ({handleNavbar}) => {
                 <h2 className="font-bold text-4xl text-white">Assemble Your Ultimate Dream 11 Cricket Team</h2>
                 <p className="font-[Inter,sans-serif] text-2xl text-[rgba(255,255,255,0.7)]">Beyond Boundaries Beyond Limits</p>
                 <div className="border-2 border-[#E7FE29] w-[170px] mx-auto flex justify-center p-1 rounded-lg">
-                    <button onClick={()=>handleNavbar(50000)} className="btn bg-[#E7FE29] border-0 rounded-lg text-[#131313] font-bold ">Claim Free Credit</button>
+                    <button onClick={()=>handleClaimCoin(200000)} className="btn bg-[#E7FE29] border-0 rounded-lg text-[#131313] font-bold ">Claim Free Credit</button>
                 </div>
 
             </div>

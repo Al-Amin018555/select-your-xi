@@ -1,6 +1,6 @@
-const Player = ({ player }) => {
-    console.log(player)
-    const { playerId, image, name, country, role, battingType, bowlingType, biddingPrice } = player;
+const Player = ({ player,handleAvailableCoin }) => {
+    // console.log(player)
+    const {image, name, country, role, battingType, bowlingType, biddingPrice } = player;
     return (
         <div className="">
             <div className="card bg-base-100 p-4 shadow-sm">
@@ -10,7 +10,7 @@ const Player = ({ player }) => {
                         alt="" />
                 </figure>
                 <div className="card-body p-0">
-                    <div className="flex items-center mt-4">
+                    <div className="flex gap-2 items-center mt-4">
                         <img className="w-[28px]" src="/public/assets/media/player-icon.png" alt="" />
                         <h2 className="card-title">{name}</h2>
 
@@ -28,7 +28,7 @@ const Player = ({ player }) => {
                     </div>
                     <div className="card-actions flex items-center">
                         <p>Price: ${biddingPrice}</p>
-                        <button className="btn btn-ghost">Choose Player</button>
+                        <button onClick={()=>handleAvailableCoin(biddingPrice)} className="btn">Choose Player</button>
                     </div>
                 </div>
             </div>

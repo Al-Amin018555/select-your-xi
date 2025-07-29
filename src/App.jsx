@@ -6,6 +6,7 @@ import Players from "./Components/Players/Players";
 function App() {
   const [coins, setCoins] = useState(0);
   const [players, setPlayers] = useState([]);
+  const [activeButton, setActiveButton] = useState(null);
 
   useEffect(() => {
     fetch('data.json')
@@ -13,25 +14,29 @@ function App() {
       .then(data => setPlayers(data))
   }, [])
 
-  const handleNavbar = (addedCoins) => {
+  const handleClaimCoin = (addedCoins) => {
     const totalCoins = coins + addedCoins;
     setCoins(totalCoins)
 
   }
 
+  const handleAvailableCoin = (biddingPrice) => {
+    console.log(biddingPrice)
+    if (coins < biddingPrice) {
+      alert("you do not have enough coin")
+    }
+  }
+  const handleClick = (buttonName) => {
+    setActiveButton(buttonName);
+  }
+
+  // console.log(status)
   return (
     <div>
       <Navbar coins={coins}></Navbar>
-      <Banner handleNavbar={handleNavbar}></Banner>
-      {/* player section */}
-      <div className="flex justify-between mt-10 max-w-7xl mx-auto">
-        <h3 className="font-bold text-[28px] text-[#131313]">Available Players</h3>
-        <div>
-          <button className="btn">Available</button>
-          <button className="btn">Selected (<span>0</span>)</button>
-        </div>
-      </div>
-      <Players players={players}></Players>
+      <Banner handleClaimCoin={handleClaimCoin}></Banner>
+
+      <Players activeButton={activeButton} handleClick={handleClick} handleAvailableCoin={handleAvailableCoin} players={players}></Players>
 
       {/* newsletter section */}
       <div className="max-w-7xl mx-auto border-[1px] rounded-2xl mt-5 border-black p-5">
