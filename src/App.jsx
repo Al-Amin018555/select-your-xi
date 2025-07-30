@@ -7,6 +7,7 @@ function App() {
   const [coins, setCoins] = useState(0);
   const [players, setPlayers] = useState([]);
   const [activeButton, setActiveButton] = useState(null);
+  const [selectedPlayers, setSelectedPlayers] = useState([]);
 
   useEffect(() => {
     fetch('data.json')
@@ -20,12 +21,21 @@ function App() {
 
   }
 
-  const handleAvailableCoin = (biddingPrice) => {
+  const handleChoosePlayer = (biddingPrice, player) => {
     console.log(biddingPrice)
-    if (coins < biddingPrice) {
+    if (biddingPrice <= coins) {
+     
+      const newPlayer = [...selectedPlayers,player];
+      setSelectedPlayers(newPlayer)
+      console.log(selectedPlayers)
+    }
+    else {
+
       alert("you do not have enough coin")
     }
   }
+  // console.log(selectedPlayers);
+
   const handleClick = (buttonName) => {
     setActiveButton(buttonName);
   }
@@ -36,7 +46,7 @@ function App() {
       <Navbar coins={coins}></Navbar>
       <Banner handleClaimCoin={handleClaimCoin}></Banner>
 
-      <Players activeButton={activeButton} handleClick={handleClick} handleAvailableCoin={handleAvailableCoin} players={players}></Players>
+      <Players activeButton={activeButton} handleClick={handleClick} handleChoosePlayer={handleChoosePlayer} selectedPlayers={selectedPlayers} players={players}></Players>
 
       {/* newsletter section */}
       <div className="max-w-7xl mx-auto border-[1px] rounded-2xl mt-5 border-black p-5">

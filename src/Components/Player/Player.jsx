@@ -1,4 +1,4 @@
-const Player = ({ player,handleAvailableCoin }) => {
+const Player = ({ player,handleChoosePlayer }) => {
     // console.log(player)
     const {image, name, country, role, battingType, bowlingType, biddingPrice } = player;
     return (
@@ -28,7 +28,7 @@ const Player = ({ player,handleAvailableCoin }) => {
                     </div>
                     <div className="card-actions flex items-center">
                         <p>Price: ${biddingPrice}</p>
-                        <button onClick={()=>handleAvailableCoin(biddingPrice)} className="btn">Choose Player</button>
+                        <button onClick={()=>handleChoosePlayer(biddingPrice,player)} className="btn">Choose Player</button>
                     </div>
                 </div>
             </div>
