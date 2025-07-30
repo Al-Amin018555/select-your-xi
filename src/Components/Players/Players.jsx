@@ -22,7 +22,7 @@ const Players = ({selectedPlayers, activeButton, handleClick, players, handleCho
 
                 }
             </div>
-            <div className={`${activeButton === 'selected' ? 'max-w-7xl mt-10 mx-auto space-y-4':''}`}>
+            <div className={`${activeButton === 'selected' ? 'max-w-7xl mt-10 mx-auto space-y-4':'hidden'}`}>
                 {
                     selectedPlayers.map((player,idx)=> <SelectedPlayers key={idx} player={player}></SelectedPlayers>)
                 }

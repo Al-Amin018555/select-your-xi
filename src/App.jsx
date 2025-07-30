@@ -22,7 +22,17 @@ function App() {
   }
 
   const handleChoosePlayer = (biddingPrice, player) => {
-    console.log(biddingPrice)
+    if (selectedPlayers.length >= 6) {
+      alert('You can pick only 6 players');
+      return
+    }
+    const isExitPlayer = selectedPlayers.find(plr => plr.playerId === player.playerId)
+    if (isExitPlayer) {
+      alert('player already selected');
+      return
+    }
+
+    console.log(player);
     if (biddingPrice <= coins) {
       const remainingCoins = coins - biddingPrice;
       setCoins(remainingCoins);
@@ -31,7 +41,6 @@ function App() {
       console.log(selectedPlayers)
     }
     else {
-
       alert("you do not have enough coin")
     }
   }
