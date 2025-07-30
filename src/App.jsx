@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 import Banner from "./Components/Banner/Banner"
 import Navbar from "./Components/Navbar/Navbar"
 import Players from "./Components/Players/Players";
@@ -8,6 +9,13 @@ function App() {
   const [players, setPlayers] = useState([]);
   const [activeButton, setActiveButton] = useState(null);
   const [selectedPlayers, setSelectedPlayers] = useState([]);
+
+  const showToastMessage = (message) => {
+    toast.success(message, {
+      position: "top-right"
+    });
+    
+  };
 
   useEffect(() => {
     fetch('data.json')
@@ -21,9 +29,16 @@ function App() {
 
   }
 
+  const handleDeletePlayer = (id) => {
+    // console.log('kare dlt korba?')
+    const remainingPlayer = selectedPlayers.filter(player => player.playerId !== id );
+    setSelectedPlayers(remainingPlayer);
+  }
+
   const handleChoosePlayer = (biddingPrice, player) => {
     if (selectedPlayers.length >= 6) {
       alert('You can pick only 6 players');
+      // showToastMessage('You can pick only 6 players');
       return
     }
     const isExitPlayer = selectedPlayers.find(plr => plr.playerId === player.playerId)
@@ -38,7 +53,9 @@ function App() {
       setCoins(remainingCoins);
       const newPlayer = [...selectedPlayers, player];
       setSelectedPlayers(newPlayer)
-      console.log(selectedPlayers)
+      // console.log(selectedPlayers)
+    //   showToastMessage()
+    //  <ToastContainer />
     }
     else {
       alert("you do not have enough coin")
@@ -56,8 +73,10 @@ function App() {
       <Navbar coins={coins}></Navbar>
       <Banner handleClaimCoin={handleClaimCoin}></Banner>
 
-      <Players activeButton={activeButton} handleClick={handleClick} handleChoosePlayer={handleChoosePlayer} selectedPlayers={selectedPlayers} players={players}></Players>
+      <Players handleDeletePlayer={handleDeletePlayer} showToastMessage={showToastMessage} activeButton={activeButton} 
+      handleClick={handleClick} handleChoosePlayer={handleChoosePlayer} selectedPlayers={selectedPlayers} players={players}></Players>
 
+       {/* <ToastContainer /> */}
       {/* newsletter section */}
       <div className="max-w-7xl mx-auto border-[1px] rounded-2xl mt-5 border-black p-5">
         <div className="bg-[url(/assets/media/bg-shadow.png)] h-[330px] bg-[rgba(255,255,255,0.15)] flex flex-col space-y-3 justify-center items-center rounded-2xl">

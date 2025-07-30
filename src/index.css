@@ -3,7 +3,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-
 body{
   font-family: "Sora", sans-serif;
   /* max-width: 1280px;

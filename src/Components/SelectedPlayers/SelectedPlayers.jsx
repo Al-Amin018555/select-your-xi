@@ -1,5 +1,5 @@
-const SelectedPlayers = ({ player }) => {
-    const { image, name, role, price } = player;
+const SelectedPlayers = ({ player,handleDeletePlayer }) => {
+    const { playerId,image, name, role, price } = player;
     return (
         <div className="">
             <div className="flex items-center justify-between shadow-lg rounded-lg p-4">
@@ -15,7 +15,7 @@ const SelectedPlayers = ({ player }) => {
 
                 </div>
                 <div>
-                    <button className="btn"> <img src="/assets/media/delete1.png" className="w-[24px]" alt="" />
+                    <button onClick={()=>handleDeletePlayer(playerId)} className="btn"> <img src="/assets/media/delete1.png" className="w-[24px]" alt="" />
                     </button>
 
                 </div>

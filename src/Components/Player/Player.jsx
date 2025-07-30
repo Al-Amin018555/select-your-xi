@@ -1,6 +1,7 @@
-const Player = ({ player,handleChoosePlayer }) => {
+import { ToastContainer, toast } from 'react-toastify';
+const Player = ({ player, handleChoosePlayer, showToastMessage }) => {
     // console.log(player)
-    const {image, name, country, role, battingType, bowlingType, biddingPrice } = player;
+    const { image, name, country, role, battingType, bowlingType, biddingPrice } = player;
     return (
         <div className="">
             <div className="card bg-base-100 p-4 shadow-sm">
@@ -28,7 +29,15 @@ const Player = ({ player,handleChoosePlayer }) => {
                     </div>
                     <div className="card-actions flex items-center">
                         <p>Price: ${biddingPrice}</p>
-                        <button onClick={()=>handleChoosePlayer(biddingPrice,player)} className="btn">Choose Player</button>
+                        <div>
+                            <button onClick={() => {
+                                handleChoosePlayer(biddingPrice, player)
+                                // showToastMessage()
+                            }
+                            } className="btn">Choose Player</button>
+                           
+                        </div>
+
                     </div>
                 </div>
             </div>
