@@ -8,11 +8,11 @@ const Players = ({selectedPlayers, activeButton, handleClick, players, handleCho
         <div>
             {/* players section */}
             <div className="flex justify-between mt-10 max-w-7xl mx-auto">
-                <h3 className="font-bold text-[28px] text-[#131313]">Available Players</h3>
+                <h3 className="font-bold text-[28px] text-[#131313]">{activeButton === 'selected' ? `Selected Players (${selectedPlayers.length}/6)`:'Available Players'}</h3>
                 <div>
                     <button onClick={() => handleClick('available')} className={`btn ${activeButton === 'available' ? 'active' : ''}`}
                     >Available</button>
-                    <button onClick={() => handleClick('selected')} className={`btn ${activeButton === 'selected' ? 'active' : ''}`}>Selected (<span>0</span>)</button>
+                    <button onClick={() => handleClick('selected')} className={`btn ${activeButton === 'selected' ? 'active' : ''}`}>Selected <span>({0+selectedPlayers.length})</span></button>
                 </div>
             </div>
 

@@ -24,8 +24,9 @@ function App() {
   const handleChoosePlayer = (biddingPrice, player) => {
     console.log(biddingPrice)
     if (biddingPrice <= coins) {
-     
-      const newPlayer = [...selectedPlayers,player];
+      const remainingCoins = coins - biddingPrice;
+      setCoins(remainingCoins);
+      const newPlayer = [...selectedPlayers, player];
       setSelectedPlayers(newPlayer)
       console.log(selectedPlayers)
     }
