@@ -1,7 +1,7 @@
 const SelectedPlayers = ({ player,handleDeletePlayer }) => {
     const { playerId,image, name, role, price } = player;
     return (
-        <div className="">
+        <div>
             <div className="flex items-center justify-between shadow-lg rounded-lg p-4">
                 <div className="flex items-center gap-3">
                     <div>
@@ -20,7 +20,10 @@ const SelectedPlayers = ({ player,handleDeletePlayer }) => {
 
                 </div>
             </div>
-
+             <div className="border-2 border-[rgba(19,19,19,0.4)] mt-5 w-[165px] text-center  p-1 rounded-xl">
+                    <button className="btn bg-[#E7FE29] border-0 rounded-lg text-[#131313] font-bold ">Add More Player</button>
+            </div>
+            
         </div>
     );
 };

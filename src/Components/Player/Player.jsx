@@ -13,29 +13,34 @@ const Player = ({ player, handleChoosePlayer, showToastMessage }) => {
                 <div className="card-body p-0">
                     <div className="flex gap-2 items-center mt-4">
                         <img className="w-[28px]" src="/public/assets/media/player-icon.png" alt="" />
-                        <h2 className="card-title">{name}</h2>
+                        <h2 className="card-title font-semibold text-[20px] text-[#131313]">{name}</h2>
 
                     </div>
-                    <div className="flex">
-                        <p>{country}</p>
+                    <div className="flex justify-between mt-1">
+                        <div className='flex gap-2 items-center'>
+                            <img src="/public/assets/media/flag.gif" className='w-[20px]' alt="" />
+                            <p>{country}</p>
+
+                        </div>
                         <div className="badge badge-outline">{role}</div>
                     </div>
                     <div className="divider mt-1 mb-1"></div>
-                    <p>{role}</p>
-                    <div className="flex justify-between">
+
+                    <p className='font-bold text-[#131313]'>{role}</p>
+                    <div className="flex justify-between font-bold text-[#131313]">
                         <p>{battingType}</p>
                         <p className="text-right">{bowlingType}</p>
 
                     </div>
                     <div className="card-actions flex items-center">
-                        <p>Price: ${biddingPrice}</p>
+                        <p className='font-bold text-[#131313]'>Price: ${biddingPrice}</p>
                         <div>
                             <button onClick={() => {
                                 handleChoosePlayer(biddingPrice, player)
                                 // showToastMessage()
                             }
                             } className="btn">Choose Player</button>
-                           
+
                         </div>
 
                     </div>
