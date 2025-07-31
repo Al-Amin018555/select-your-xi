@@ -86,7 +86,7 @@ function App() {
 
           <div className="flex gap-2">
             <input type="text" className="w-[400px] input" placeholder="Enter your email" />
-            <button className="btn w-[140px]">Subscribe</button>
+            <button className="btn w-[140px] bg-[#E7FE29] ">Subscribe</button>
           </div>
 
         </div>
@@ -122,7 +122,7 @@ function App() {
                   </label>
                   <div className="validator-hint hidden">Enter valid email address</div>
                 </div>
-                <button className="btn btn-neutral join-item">Subscribe</button>
+                <button className="btn btn-neutral bg-[#E7FE29] text-[#131313] join-item">Subscribe</button>
               </div>
             </div>
           </nav>
