@@ -1,12 +1,11 @@
-import { ToastContainer, toast } from 'react-toastify';
-const Player = ({ player, handleChoosePlayer, showToastMessage }) => {
+const Player = ({ player, handleChoosePlayer}) => {
     // console.log(player)
     const { image, name, country, role, battingType, bowlingType, biddingPrice } = player;
     return (
         <div className="">
             <div className="card bg-base-100 p-4 shadow-sm">
                 <figure>
-                    <img className="w-[370px] h-[250px] "
+                    <img className="w-[370px] h-[250px] rounded-xl"
                         src={image}
                         alt="" />
                 </figure>
@@ -37,7 +36,7 @@ const Player = ({ player, handleChoosePlayer, showToastMessage }) => {
                         <div>
                             <button onClick={() => {
                                 handleChoosePlayer(biddingPrice, player)
-                                // showToastMessage()
+                                
                             }
                             } className="btn">Choose Player</button>
 
