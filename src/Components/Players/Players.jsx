@@ -7,7 +7,9 @@ const Players = ({ handleDeletePlayer, showToastMessage, selectedPlayers, active
     return (
         <div>
             {/* players section */}
-            <div className="flex justify-between mt-10 max-w-7xl mx-auto">
+
+            {/* player header section */}
+            <div className="flex flex-col lg:flex-row text-center space-y-4 lg:justify-between mt-10 max-w-7xl mx-auto">
                 <h3 className="font-bold text-[28px] text-[#131313]">{activeButton === 'selected' ? `Selected Players (${selectedPlayers.length}/6)` : 'Available Players'}</h3>
                 <div>
                     <button onClick={() => handleClick('available')} className={`btn ${activeButton === 'available' ? 'active' : ''}`}
@@ -16,7 +18,7 @@ const Players = ({ handleDeletePlayer, showToastMessage, selectedPlayers, active
                 </div>
             </div>
 
-            <div className={`${activeButton === 'selected' ? 'hidden' : ''} max-w-7xl mx-auto mt-5 grid gap-5 grid-cols-3`}>
+            <div className={`${activeButton === 'selected' ? 'hidden' : ''} max-w-7xl mx-auto mt-5 grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3`}>
                 {
                     players.map((player, idx) => <Player showToastMessage={showToastMessage} handleChoosePlayer={handleChoosePlayer} key={idx} player={player}></Player>)
 

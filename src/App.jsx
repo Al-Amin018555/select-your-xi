@@ -78,15 +78,15 @@ function App() {
 
        {/* <ToastContainer /> */}
       {/* newsletter section */}
-      <div className="max-w-7xl mx-auto border-[1px] rounded-2xl mt-5 border-black p-5">
+      <div className="lg:max-w-7xl mx-auto border-[1px] rounded-2xl mt-5 border-black p-5">
         <div className="bg-[url(/assets/media/bg-shadow.png)] h-[330px] bg-[rgba(255,255,255,0.15)] flex flex-col space-y-3 justify-center items-center rounded-2xl">
 
-          <h3 className="text-3xl font-bold text-[#131313]">Subscribe to our Newsletter</h3>
-          <p className="font-[Inter,sans-serif] text-[rgba(19,19,19,0.7)] font-medium text-[20px]">Get the latest updates and news right in your inbox!</p>
+          <h3 className="text-2xl lg:text-3xl font-bold text-[#131313]">Subscribe to our Newsletter</h3>
+          <p className="font-[Inter,sans-serif] text-[rgba(19,19,19,0.7)] font-medium text-sm lg:text-[20px]">Get the latest updates and news right in your inbox!</p>
 
-          <div className="flex gap-2">
-            <input type="text" className="w-[400px] input" placeholder="Enter your email" />
-            <button className="btn w-[140px] bg-[#E7FE29] ">Subscribe</button>
+          <div className="flex flex-col lg:flex-row gap-2">
+            <input type="text" className="w-[350px] lg:w-[400px] input" placeholder="Enter your email" />
+            <button className="btn w-[140px] mx-auto bg-[#E7FE29] ">Subscribe</button>
           </div>
 
         </div>

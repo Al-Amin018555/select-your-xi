@@ -4,7 +4,7 @@ const Navbar = ({ coins }) => {
             <div className="navbar bg-white shadow-lg">
                 <div className="p-3 flex flex-col lg:flex-row items-center justify-between w-full lg:w-7xl mx-auto">
                     <div>
-                        <a><img src="/assets/media/logo.png" alt="" /></a>
+                        <a className="hidden lg:flex"><img src="/assets/media/logo.png" alt="" /></a>
                     </div>
                     <div>
                         <ul className="menu flex items-center justify-center menu-horizontal px-1 text-[rgba(19,19,19,0.7)]">
