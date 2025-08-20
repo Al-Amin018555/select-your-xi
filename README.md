@@ -2,9 +2,7 @@
 
 Select Your XI is a cricket player selection web app built with React where users can assemble their dream team within a credit limit.
 
-🔗 Live Demo: Select Your XI on Netlify
-
-💻 GitHub Repo: Select Your XI Repo
+🔗 Live Demo: https://lambent-paletas-dbf189.netlify.app/
 
 
 🚀 Features
