@@ -2,12 +2,12 @@ const Navbar = ({ coins }) => {
     return (
         <nav className="sticky top-0 z-20">
             <div className="navbar bg-white shadow-lg">
-                <div className="p-3 flex items-center justify-between w-7xl mx-auto">
+                <div className="p-3 flex flex-col lg:flex-row items-center justify-between w-full lg:w-7xl mx-auto">
                     <div>
                         <a><img src="/assets/media/logo.png" alt="" /></a>
                     </div>
                     <div>
-                        <ul className="menu flex items-center menu-horizontal px-1 text-[rgba(19,19,19,0.7)]">
+                        <ul className="menu flex items-center justify-center menu-horizontal px-1 text-[rgba(19,19,19,0.7)]">
                             <li><a>Link</a></li>
                             <li><a>Fixture</a></li>
                             <li><a>Teams</a></li>
