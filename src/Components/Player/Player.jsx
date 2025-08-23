@@ -1,5 +1,5 @@
 const Player = ({ player, handleChoosePlayer}) => {
-    // console.log(player)
+    
     const { image, name, country, role, battingType, bowlingType, biddingPrice } = player;
     return (
         <div className="">

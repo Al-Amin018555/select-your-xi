@@ -1,21 +1,14 @@
 import { useEffect, useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
 import Banner from "./Components/Banner/Banner"
 import Navbar from "./Components/Navbar/Navbar"
 import Players from "./Components/Players/Players";
+import { toast } from "react-toastify";
 
 function App() {
   const [coins, setCoins] = useState(0);
   const [players, setPlayers] = useState([]);
   const [activeButton, setActiveButton] = useState(null);
   const [selectedPlayers, setSelectedPlayers] = useState([]);
-
-  const showToastMessage = (message) => {
-    toast.success(message, {
-      position: "top-right"
-    });
-    
-  };
 
   useEffect(() => {
     fetch('data.json')
@@ -26,54 +19,48 @@ function App() {
   const handleClaimCoin = (addedCoins) => {
     const totalCoins = coins + addedCoins;
     setCoins(totalCoins)
-
+    toast("Coins Claimed")
   }
 
   const handleDeletePlayer = (id) => {
-    // console.log('kare dlt korba?')
     const remainingPlayer = selectedPlayers.filter(player => player.playerId !== id );
     setSelectedPlayers(remainingPlayer);
   }
 
   const handleChoosePlayer = (biddingPrice, player) => {
     if (selectedPlayers.length >= 6) {
-      alert('You can pick only 6 players');
-      // showToastMessage('You can pick only 6 players');
+      toast('You can pick only 6 players')
       return
     }
     const isExitPlayer = selectedPlayers.find(plr => plr.playerId === player.playerId)
     if (isExitPlayer) {
-      alert('player already selected');
+      toast('You have already selected this player')
       return
     }
 
-    console.log(player);
     if (biddingPrice <= coins) {
       const remainingCoins = coins - biddingPrice;
       setCoins(remainingCoins);
       const newPlayer = [...selectedPlayers, player];
       setSelectedPlayers(newPlayer)
-      // console.log(selectedPlayers)
-    //   showToastMessage()
-    //  <ToastContainer />
+      toast('player selected')
     }
     else {
-      alert("you do not have enough coin")
+      toast("you do not have enough coin")
     }
   }
-  // console.log(selectedPlayers);
+  
 
   const handleClick = (buttonName) => {
     setActiveButton(buttonName);
   }
 
-  // console.log(status)
   return (
     <div>
       <Navbar coins={coins}></Navbar>
       <Banner handleClaimCoin={handleClaimCoin}></Banner>
 
-      <Players handleDeletePlayer={handleDeletePlayer} showToastMessage={showToastMessage} activeButton={activeButton} 
+      <Players handleDeletePlayer={handleDeletePlayer} activeButton={activeButton} 
       handleClick={handleClick} handleChoosePlayer={handleChoosePlayer} selectedPlayers={selectedPlayers} players={players}></Players>
 
        {/* <ToastContainer /> */}

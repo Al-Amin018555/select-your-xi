@@ -2,7 +2,7 @@ import Player from "../Player/Player";
 import SelectedPlayers from "../SelectedPlayers/SelectedPlayers";
 import './Players.css';
 
-const Players = ({ handleDeletePlayer, showToastMessage, selectedPlayers, activeButton, handleClick, players, handleChoosePlayer }) => {
+const Players = ({ handleDeletePlayer, selectedPlayers, activeButton, handleClick, players, handleChoosePlayer }) => {
 
     return (
         <div>
@@ -20,7 +20,7 @@ const Players = ({ handleDeletePlayer, showToastMessage, selectedPlayers, active
 
             <div className={`${activeButton === 'selected' ? 'hidden' : ''} max-w-7xl mx-auto mt-5 grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3`}>
                 {
-                    players.map((player, idx) => <Player showToastMessage={showToastMessage} handleChoosePlayer={handleChoosePlayer} key={idx} player={player}></Player>)
+                    players.map((player, idx) => <Player handleChoosePlayer={handleChoosePlayer} key={idx} player={player}></Player>)
 
                 }
             </div>
