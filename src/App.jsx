@@ -25,6 +25,7 @@ function App() {
   const handleDeletePlayer = (id) => {
     const remainingPlayer = selectedPlayers.filter(player => player.playerId !== id );
     setSelectedPlayers(remainingPlayer);
+    toast('player removed successfully!')
   }
 
   const handleChoosePlayer = (biddingPrice, player) => {
